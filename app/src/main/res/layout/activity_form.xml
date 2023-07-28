@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back"
+    tools:context=".form">
+
+
+    <TextView
+        android:id="@+id/form_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/app_name"
+        android:textColor="#B82424"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player1"
+        app:layout_constraintStart_toStartOf="@+id/player1" />
+
+    <TextView
+        android:id="@+id/l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player2"
+        app:layout_constraintStart_toStartOf="@+id/player2" />
+
+    <TextView
+        android:id="@+id/l3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Mode"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dropdown"
+        app:layout_constraintStart_toStartOf="@+id/dropdown" />
+
+    <EditText
+        android:id="@+id/player1"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:drawableLeft="@drawable/x_icon"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/purple_500"
+        android:background="@drawable/ic_back"
+        android:paddingHorizontal="10dp"
+        android:ems="10"
+        android:hint="Player 1"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_head" />
+
+    <EditText
+        android:id="@+id/player2"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:drawableLeft="@drawable/o_icon"
+        android:drawablePadding="6dp"
+        android:paddingHorizontal="10dp"
+        android:drawableTint="#FF0000"
+        android:background="@drawable/ic_back"
+        android:ems="10"
+        android:hint="Player 2"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1" />
+
+    <LinearLayout
+        android:id="@+id/dropdown"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:dropDownSelector="@color/black"
+            android:paddingHorizontal="10dp"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/blue_button"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Start Game"
+        android:textSize="16sp"
+        android:shadowColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
